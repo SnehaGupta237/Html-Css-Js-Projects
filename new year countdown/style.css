@@ -1,0 +1,66 @@
+body{
+    background-color:rgb(133, 69, 192);
+    margin:0;
+    display:flex;                    /*assembles  side by side*/    flex-direction: column;           /*assemble vertically*/
+    align-items:center  ;              /*in center*/
+    justify-content:center;
+    height: 100vh;
+    font-family: cursive;
+}
+
+h1{
+    color:#fff;
+    text-transform:uppercase;           /*each letter in uppercase*/
+}
+
+.year{
+    color:#fff;
+    font-size:5em;
+    font-weight:bold;
+}
+ 
+/*applied to the whole coundown div*/
+.countdown{
+    /* margin:40px; */
+    background-color: rgba(0,0,0,0.1);
+    width:100%;
+    color:#fff;
+    height:150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*applied only to the div inside countdown div (numbers)*/
+.countdown div{
+    margin:0 30px;                            /*top/bottom   left/right*/
+    font-size: 2em;
+    margin-top:-30px;                        /*shift upwards*/
+    position:relative;
+    text-align: center;
+    width:100px;
+
+}
+
+/*applied to the tags(days etc)*/
+.countdown div::before{
+    content:"";
+    bottom:-30px;
+    font-size: 0.5em;
+    position: absolute;
+    text-transform:uppercase ;
+    
+}
+
+.countdown #day::before{
+    content:"Days";
+}
+.countdown #hour::before{
+    content:"Hour";
+}
+.countdown #minute::before{
+    content:"Minutes";
+}
+.countdown #second::before{
+    content:"Seconds";
+}

@@ -1,0 +1,69 @@
+/*applied to all*/ 
+*{
+    box-sizing:border-box ;                            /*insures that any padding/border u add in elements will be included within their total width/height */
+    margin:0                                          /*removes default extra space around the elements*/ 
+}
+
+/*class*/
+.calculator{
+    background-color:#f2f2f2;
+    padding:20px;
+    margin:100px auto;                              /*top and botton =100 ,left and right=auto  ...to keep it in center of screen*/
+    max-width: 400px;                               /* width in x axix*/
+    border:solid 1px #ccc;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);        /*0px vertical,2px horizontal,5px blur,and shadow color with 30% tranparency*/
+    border-radius:8px                              /*round corners*/
+}
+
+/*id*/
+#result{
+    width:100%;
+    padding:10px;
+    font-size:30px;
+    border:none;
+    box-shadow:0 2px 5px rgba(0,0,0,0.3) inset ;   /*inset..shadow appears inside box*/
+    border-radius:5px;   
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);            /*each row with 4 columns with equal width,fr..fractional unit..equally divide space in grid*/
+    grid-gap:10px ;               /*space btw buttons*/
+    margin-top:20px
+}
+
+
+button{
+    border:none;
+    box-shadow:0 2px 5px rgba(0,0,0,0.3);
+    border-radius:5px;
+    padding:10px;
+    font-size: 20px;
+    cursor: pointer;              /*gives cursor a hand icon when hover on button*/
+    transition: background-color 0.3s ease         /*transition is applied to bg-color for 0.3sec ...this gives smooth effect when hover*/
+}
+
+button:hover{
+    background-color: #ddd;
+}
+
+.clear{
+    background-color: rgb(240, 8, 8);
+    color:white;
+}
+
+.operator{
+    background-color:#0074d9 ;
+    color:#fff
+}
+
+.number{
+    background-color: #fff;  
+    color:#333;      
+}
+
+.equal{
+    background-color:#01ff70;
+    grid-row: span 3;                    /*covers 3 row*/
+    color:#fff
+}
